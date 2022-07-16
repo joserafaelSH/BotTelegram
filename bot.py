@@ -5,9 +5,8 @@ import json
 
 class Bot:
     def __init__(self) -> None:
-        #self.TK = "5381472996:AAHlcbkcxIlVlaIswPuDr6H4P3QOeOpIKCM" 
-        #self.URL =  f'http://api.telegram.org/bot{self.TK}/'
-        self.TK = "5381472996:AAHlcbkcxIlVlaIswPuDr6H4P3QOeOpIKCM" 
+        load_dotenv()
+        self.TK = os.environ.get("TK")
         self.URL =  f'http://api.telegram.org/bot{self.TK}/'        
         #temporario
         self.users = []
